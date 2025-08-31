@@ -6,6 +6,6 @@ output "dev_service_name" {
   value = aws_ecs_service.dev.name
 }
 
-# output "qa_service_name" {
-#   value = aws_ecs_service.qa.name
-# }
+output "qa_service_name" {
+  value = aws_ecs_service.qa.name
+}
