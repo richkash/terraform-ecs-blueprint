@@ -1,0 +1,40 @@
+# ─────────────────────────────
+# Terraform files
+# ─────────────────────────────
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform crash log
+crash.log
+
+# Terraform CLI local files
+.terraform/
+.terraform.lock.hcl
+
+# Plan outputs
+*.plan
+
+# ─────────────────────────────
+# AWS credentials & configs
+# ─────────────────────────────
+# Do not commit your AWS CLI credentials
+.aws/
+credentials
+config
+
+# ─────────────────────────────
+# Docker
+# ─────────────────────────────
+.docker
+*.log
+
+# Virtual environment
+.venv/
+env/
+venv/
