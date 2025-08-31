@@ -37,10 +37,7 @@ jobs:
           REPO_URI=$ACCOUNT_ID.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/${{ env.IMAGE_REPO }}
 
           echo "Building Docker image..."
-          docker build -t flask-app .
-
-          echo "Tagging Docker image..."
-          docker tag flask-app $REPO_URI:${{ env.IMAGE_TAG }}
+          docker build -t $REPO_URI:${{ env.IMAGE_TAG }} ./flask-app
 
           echo "Pushing to ECR..."
           docker push $REPO_URI:${{ env.IMAGE_TAG }}
